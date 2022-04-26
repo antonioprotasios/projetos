@@ -1,0 +1,35 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+div.banner > img {
+    width: 100vw;
+    height: 100vh;
+    background-color: blueviolet;
+    background-size: cover;
+    position: absolute;
+   
+}
+
+div.vidro {
+    background-color: rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 20px 20px rgb(0, 0, 0, );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translate3d(35%, 35%, 0 );
+    width: 60%;
+    height: 60%;
+    
+}
+
+div.usuario {
+    color: white;
+    font-family: sans-serif;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 20px;
+}
