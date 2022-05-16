@@ -116,7 +116,7 @@ div.senha > input {
 }
 
 div.usuario > input:focus {
-    background-color: rgba(144, 188, 197, 0.349); /* Isso colocará um background no fundo do input ao passar o mouse em cima */
+    background-color: rgba(144, 188, 197, 0.349); 
    
 }
 
@@ -141,7 +141,7 @@ span.aviso> p {
     text-align: center;
 }
 
- button.entra { /* Butão de entrada que rediçionará a uma pagina relacionada */
+ button.entra { 
   display: flex;
   float: left;
 
@@ -184,7 +184,7 @@ button.entra::before { /*Esse elemento irá adicionar a animação ao botão*/
 
 button.entra:hover {
     
-    transform: translateY(10%) translateX(5px); /* Essa tang irá mver o elemento para o lado desejado */
+    transform: translateY(10%) translateX(5px); /* Essa tang irá mover o elemento para o lado desejado */
     transition: transform .10s .2s cubic-bezier(0,0,.5,2), width .10s cubic-bezier(0,0,.5,2); /* Isso irá definir a tempo da animação e a reta desejada*/
     
     backdrop-filter: 10s; /* Essa tang permitirá executar efeitos graficos como: mudança de cor, etc */
@@ -242,7 +242,7 @@ button.criar::before { /*Esse elemento irá adicionar a animação ao botão*/
 
 button.criar:hover {
     
-    transform: translateY(10%) translateX(5px); /* Essa tang irá mver o elemento para o lado desejado */
+    transform: translateY(10%) translateX(5px); /* Essa tang irá mover o elemento para o lado desejado */
     transition: transform .10s .2s cubic-bezier(0,0,.5,2), width .10s cubic-bezier(0,0,.5,2); /* Isso irá definir a tempo da animação e a reta desejada*/
     
     backdrop-filter: 10s; /* Essa tang permitirá executar efeitos graficos como: mudança de cor, etc */
