@@ -1,55 +1,110 @@
 *{
-    margin: 0%;
-}
+    margin: 0%;   /* Esse comando é usado para definir um difinitivo de uma pagina HTML */
+} 
 
 
 body {
     margin: 0%;
     padding: 0%;
-
+    background-image: url(imagens/fundo03.jpg);
+    background-repeat: no-repeat;
+    background-position: center  center;
+    background-size: cover;
+    height: 585px;
 }
 
-div.banner > img {
+
+
+div.corpo > img { /* Essa é a div principal da pagina */
+    background-color: blueviolet;
+    background-size: cover; /* Isso deixará a sua imagem com a resolução normal ( Sem zom ) */
     width: 100vw;
     height: 100vh;
-    background-color: blueviolet;
-    background-size: cover;
     position: absolute;
-   
-}
+   }
 
-div.vidro {
-    background-color: rgba(97, 90, 90, 0.2);
-    backdrop-filter: blur(3px);
-    box-shadow: 0 20px 20px rgb(0, 0, 0, );
-    display: flex;
+
+main.vidro {
+    display: flex; 
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    transform: translate3d(35%, 35%, 0 );
+    background-color: rgba(128, 128, 128, 0.315);
+    box-shadow: 0 20px 20px rgb(0, 0, 0, );
     width: 60%;
     height: 60%;
-    
+    position: absolute; /* Isso deixará o seu item no centro com valor total */
+    justify-content: center;
+    transform: translate3d(35%, 35%, 0 ); /* Esse comando deixará seu intem com um efeito 3D */
+    backdrop-filter: blur(3px);/* Esse comando representa trasparencia, voçe indicará o nivel , no meu caso foram (3px) */
 }
 
-div.usuario {
-    color: white;
-    font-family: sans-serif;
-    font-variant: small-caps;
-    font-weight: bolder;
-    font-size: 20px;
-    margin-right: 10px;
+
+
+input {
+    color: white; /*Essa é a cor das palavras ( Login e senha ), que estão dentro do input ('Retangulos') */
 }
+
+
+input:focus::-webkit-input-placeholder { 
+    color: transparent; /* Isso deixará o input com uma coloração trasparente */
+ }
+
+
+ input:focus:-moz-placeholder { 
+    color: transparent;  
+ }
+
+
+ input:focus::-moz-placeholder {  
+    color: transparent;  
+ }
+
+ 
+ input:focus:-ms-input-placeholder {  
+    color: transparent;
+}
+
+input:invalid{
+    animation: shake 300ms;
+
+}
+
+input::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes shake {
+    25% {transform: translateX(5px);}
+    50% {transform: translateX(-4px);}
+    75% {transform: translateX(4px);}
+}
+
+span.boasvindas > h1{ 
+    font-family: sans-serif;
+    color: white;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+
+div.usuario {
+    margin-right: 10px; 
+
+}
+
 
 div.usuario > input {
     background-color: rgba(17, 15, 15, 0.678);
     border-style: none;
     border-radius: 5px;
-    padding: 5%;
-    padding-right: 40px;
     margin-bottom: 20px;
-
+    padding: 5%;
+    padding-right: 40px; 
 }
+
+
 
 div.senha > input {
     background-color: rgba(17, 15, 15, 0.678);
@@ -57,27 +112,162 @@ div.senha > input {
     border-radius: 5px;
     padding: 5%;
     padding-right: 40px;
-}
-
-
-input::placeholder {
-    color: white;
     
 }
 
-input {
+div.usuario > input:focus {
+    background-color: rgba(144, 188, 197, 0.349); /* Isso colocará um background no fundo do input ao passar o mouse em cima */
+   
+}
+
+
+div.senha > input:focus {
+    background-color: rgba(144, 188, 197, 0.349);
+}
+
+
+span.aviso {
+    display: block;
+    margin-top: 15px;
+    padding: 5px;
+ 
+}
+
+
+span.aviso> p {
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+ button.entra { /* Butão de entrada que rediçionará a uma pagina relacionada */
+  display: flex;
+  float: left;
+
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+
+  background-color: rgba(9, 67, 134, 0.678);
+  color: rgb(255, 255, 255);
+  transition: 0.30s;
+            
+  cursor: pointer;
+            
+  margin: 5px;
+  margin-top: 30px;
+  margin-left: 5px; 
+
+           
+  padding: 10px ;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  border-radius: 5px;
+  border-style: none;
+            
+}
+
+
+button.entra::before { /*Esse elemento irá adicionar a animação ao botão*/
+    content: ''; 
+    position: absolute; 
+    top: 20%;
+    transform: translateY(-50%) translateX(calc (100% + 40%)); 
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    transition: transform .25s .25s cubic-bezier(0,0,.5,2), width .25s cubic-bezier(0,0,.5,2);
+    z-index: -1;
+}
+
+button.entra:hover {
+    
+    transform: translateY(10%) translateX(5px); /* Essa tang irá mver o elemento para o lado desejado */
+    transition: transform .10s .2s cubic-bezier(0,0,.5,2), width .10s cubic-bezier(0,0,.5,2); /* Isso irá definir a tempo da animação e a reta desejada*/
+    
+    backdrop-filter: 10s; /* Essa tang permitirá executar efeitos graficos como: mudança de cor, etc */
+
+    color: rgb(73, 138, 175);
+}
+
+button.entra i {
+    transition: transform .25s .4s cubic-bezier(0,0,.5,2);
+}
+
+button.entra i:hover {
+    transform: translateX(0px);
+}
+
+
+button.criar {
+    display: flex;
+    float: left;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+  
+    background-color: rgba(9, 67, 134, 0.678);
+    color: rgb(255, 255, 255);
+    transition: 0.30s;
+              
+    cursor: pointer;
+              
+    margin: 5px;
+    margin-top: 30px;
+    margin-left: 35px; 
+  
+             
+    padding: 10px ;
+    padding-left: 10px;
+    padding-right: 10px;
+  
+    border-radius: 5px;
+    border-style: none;
+    
+}
+
+button.criar::before { /*Esse elemento irá adicionar a animação ao botão*/
+    content: ''; 
+    position: absolute; 
+    top: 20%;
+    transform: translateY(-50%) translateX(calc (100% + 40%)); 
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    transition: transform .25s .25s cubic-bezier(0,0,.5,2), width .25s cubic-bezier(0,0,.5,2);
+    z-index: -1;
+}
+
+button.criar:hover {
+    
+    transform: translateY(10%) translateX(5px); /* Essa tang irá mver o elemento para o lado desejado */
+    transition: transform .10s .2s cubic-bezier(0,0,.5,2), width .10s cubic-bezier(0,0,.5,2); /* Isso irá definir a tempo da animação e a reta desejada*/
+    
+    backdrop-filter: 10s; /* Essa tang permitirá executar efeitos graficos como: mudança de cor, etc */
+
+}
+
+button.criar i {
+    transition: transform .25s .4s cubic-bezier(0,0,.5,2);
+}
+
+button.criar i:hover {
+    transform: translateX(0px);
+}
+
+
+button.criar > a {
+    text-decoration: none;
     color: white;
 }
 
-input:focus::-webkit-input-placeholder {
-    color: transparent;
- }
- input:focus:-moz-placeholder { 
-    color: transparent;  
- }
- input:focus::-moz-placeholder {  
-    color: transparent;  
- }
- input:focus:-ms-input-placeholder {  
-    color: transparent;  
- }
+button.criar > a:hover {
+    color: rgb(73, 138, 175);
+}
+
+
+/* Fim do projeto */
+
+
